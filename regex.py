@@ -251,18 +251,19 @@ pdata = re.findall('\(\d{3}\) \d{3}-\d{4}', htmlStr)
 
 # -------------------------------------------------------------------------------------------------------------------
 nameage = """
-Saurabh is 28 and Gaurav is 24 
-Purnima is 26 and Priyanka is 35
+My age is 28 years, my younger brother age is 24 years, my niece is 6 years old. My Grandfather's age was 111 years old 
+My pincode no is 486001 and contact no is 8602000000. 
 """
 
 # fetch ages
-age = re.findall(r'\s\d{1,2}\s ', nameage)
-# print(age)
+# print(re.findall(r'\b\d{1,3}\b', nameage))
+# ['28', '24', '6', '111']
 
 # -------------------------------------------------------------------------------------------------------------------
 dollars = "$799 Rs 63,601 $899,799,999 $899,799,999.99999 $89 Rs 71,561 79,920 $999 $1099 A$1399"
 
 # print(re.findall("\$[^ ]+", dollars))
+# ['$799', '$899,799,999', '$899,799,999.99999', '$89', '$999', '$1099', '$1399']
 
 # -------------------------------------------------------------------------------------------------------------------
 s = "hello everyone how are you how the things going on"
@@ -288,25 +289,25 @@ string = 'Zero:0 one:1 Two:2 Three:3 Four:4 Five:5 Six:6 Seven:7 eight:8 Nine:9 
 # ['Zero:', ' one:', ' Two:', ' Three:', ' Four:', ' Five:', ' Six:', ' Seven:', ' eight:', ' Nine:', ' Ten:', ' Twenty:', ' Thirty:', ' Forty:', ' Fifty:', ' Sixty:', ' Seventy:', ' Eighty:', ' Ninety:', ' Hundred:']
 
 
-print(re.split('\d+', string))  # #This statement splits the string on the basis of matching values between pattern and string.
+# print(re.split('\d+', string))  # #This statement splits the string on the basis of matching values between pattern and string.
 # ['Zero:', ' one:', ' Two:', ' Three:', ' Four:', ' Five:', ' Six:', ' Seven:', ' eight:', ' Nine:', ' Ten:', ' Twenty:', ' Thirty:', ' Forty:', ' Fifty:', ' Sixty:', ' Seventy:', ' Eighty:', ' Ninety:', ' Hundred:', '']
 
 # -------------------------------------------------------------------------------------------------------------------
-string = 'a1 \nb2 \nc4'
-pattern = '\d'  # This statement defines the regular expression for matching with the string.
-
-# empty string
-replace = 's'
-new_string = re.sub(pattern, replace,string)  # This statement replaces those matched characters with a string stored in a replace variable.
-print(new_string)  # This statement displays the new string after the replacement of characters.
-
-text = "Regular Expression is also referred as Regex."
-regex = "\d"
-res = re.search(regex, text)  # This statement searches the regular expression in a string.
-if res:
-    print("Regular expression found inside the string")
-else:
-    print("Regular expression not found inside the String")
+# string = 'a1 \nb2 \nc4'
+# pattern = '\d'  # This statement defines the regular expression for matching with the string.
+#
+# # empty string
+# replace = 's'
+# new_string = re.sub(pattern, replace,string)  # This statement replaces those matched characters with a string stored in a replace variable.
+# print(new_string)  # This statement displays the new string after the replacement of characters.
+#
+# text = "Regular Expression is also referred as Regex."
+# regex = "\d"
+# res = re.search(regex, text)  # This statement searches the regular expression in a string.
+# if res:
+#     print("Regular expression found inside the string")
+# else:
+#     print("Regular expression not found inside the String")
 
 # -------------------------------------------------------------------------------------------------------------------
 
