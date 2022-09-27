@@ -278,7 +278,8 @@ string = 'Fruits 32, Animals 80, Cars 34'
 # ['Fruits ', ', Animals ', ', Cars ']
 
 # -------------------------------------------------------------------------------------------------------------------
-string = 'Zero:0 one:1 Two:2 Three:3 Four:4 Five:5 Six:6 Seven:7 eight:8 Nine:9 Ten:10 Twenty:20 Thirty:30 Forty:40 Fifty:50 Sixty:60 Seventy:70 Eighty:80 Ninety:90 Hundred:100'
+string = 'Zero:0 one:1 Two:2 Three:3 Four:4 Five:5 Six:6 Seven:7 eight:8 Nine:9 Ten:10 Twenty:20 Thirty:30 Forty:40 ' \
+         'Fifty:50 Sixty:60 Seventy:70 Eighty:80 Ninety:90 Hundred:100 '
 
 # print(re.findall('\d+', string))
 # ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100']
@@ -289,14 +290,14 @@ string = 'Zero:0 one:1 Two:2 Three:3 Four:4 Five:5 Six:6 Seven:7 eight:8 Nine:9 
 
 print(re.split('\d+', string))  # #This statement splits the string on the basis of matching values between pattern and string.
 # ['Zero:', ' one:', ' Two:', ' Three:', ' Four:', ' Five:', ' Six:', ' Seven:', ' eight:', ' Nine:', ' Ten:', ' Twenty:', ' Thirty:', ' Forty:', ' Fifty:', ' Sixty:', ' Seventy:', ' Eighty:', ' Ninety:', ' Hundred:', '']
+
 # -------------------------------------------------------------------------------------------------------------------
 string = 'a1 \nb2 \nc4'
 pattern = '\d'  # This statement defines the regular expression for matching with the string.
 
 # empty string
 replace = 's'
-new_string = re.sub(pattern, replace,
-                    string)  # This statement replaces those matched characters with a string stored in a replace variable.
+new_string = re.sub(pattern, replace,string)  # This statement replaces those matched characters with a string stored in a replace variable.
 print(new_string)  # This statement displays the new string after the replacement of characters.
 
 text = "Regular Expression is also referred as Regex."
