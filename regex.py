@@ -106,6 +106,29 @@ str1 = result.sub("Tat", str1)
 # print(str1)
 # Sat, hat, Tat, mat, pat
 
+s = '9876-456-Jan'
+# output should be => nnnn-nnn-Ccc
+
+# Method 1:
+# res = re.compile('[A-Z]')
+#
+# s = res.sub('C', s)
+# res = re.compile('[a-z]')
+# s = res.sub('c', s)
+#
+# res = re.compile('\d')
+# s = res.sub("n", s)
+#
+# print(s)
+
+# Method 2:
+
+s = re.sub('[a-z]', 'c', s)
+s = re.sub('[A-Z]', 'C', s)
+s = re.sub('[0-9]', 'n', s)
+print(s)
+# nnnn-nnn-Ccc
+
 # -------------------------------------------------------------------------------------------------------------------
 # randstr = "here is \\droga"
 # print(randstr)
